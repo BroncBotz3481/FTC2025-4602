@@ -23,7 +23,7 @@ public class Team4602TeleOp2025 extends LinearOpMode {
         robot.DriveRightBack.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         robot.DriveLeftFront.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         robot.DriveLeftFront.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
-        robot.Intake.setPosition(0.3);
+        robot.Intake.setPosition(0.3); //Needs to be adjusted
 
         int count = 0;
         //robot.Lights.setPattern(RevBlinkinLedDriver.BlinkinPattern.BEATS_PER_MINUTE_PARTY_PALETTE);
@@ -64,30 +64,28 @@ public class Team4602TeleOp2025 extends LinearOpMode {
             robot.DriveRightFront.setPower(frontRightPower * mag);
             robot.DriveRightBack.setPower(backRightPower * mag);
 
-
+            // test arm speed to adjust a good right speed
+            boolean armSlow = gamepad2.right_trigger > 0.3;
+            double Slow = speedslow ? 0.6 : 1.0; // 1.0 is the default speed multiplier, 0.6 is what happens when Slow is true.
 
             double Arm = gamepad2.left_stick_y;
-//            double Arm2 = gamepad2.left_stick_y;
-            robot.Arm.setPower(Arm);
-//            robot.Arm2.setPower(Arm2);
-//             left bumper is open*, right bumper is close*
+            robot.Arm.setPower(Arm * Slow);
 
+//             left bumper is open*, right bumper is close*
+/*          FIX THIS. Servos have a range that we call in the program  point 0 ( think of it as the min)
+            And a point called 1.0 (The Max). Based on many factors, the 0 and one points can look
+            very different from servo to servo. You can use a servo programer to change theses positions
+            in the real world or just make it so the servo goes in a specific point between 0 - 1
+            so it goes in the right direction
+*/
             if (gamepad2.right_bumper) {
-                robot.Intake.setPosition(1.0);
+                robot.Intake.setPosition(1.0); //Needs to be ajusted
             }
             if (gamepad2.left_bumper){
-                robot.Intake.setPosition(0.3);
+                robot.Intake.setPosition(0.3); //Needs to be adjusted
             }
 
-//            if(gamepad2.y){
-//                robot.Arm1.setPower(.9);
-//            }
-//            else if (gamepad2.x){
-//                robot.Arm1.setPower(-1);
-//            }
-//            else {
-//                robot.Arm1.setPower(0);
-//            }
+
         }
     }
 }
