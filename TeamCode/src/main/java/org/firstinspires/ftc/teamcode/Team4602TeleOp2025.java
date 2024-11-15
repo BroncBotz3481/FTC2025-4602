@@ -23,7 +23,7 @@ public class Team4602TeleOp2025 extends LinearOpMode {
         robot.DriveRightBack.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         robot.DriveLeftFront.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         robot.DriveLeftFront.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
-        robot.Intake.setPosition(0.3); //Needs to be adjusted
+        //robot.Intake.setPosition(0.3); //Needs to be adjusted
 
         int count = 0;
         //robot.Lights.setPattern(RevBlinkinLedDriver.BlinkinPattern.BEATS_PER_MINUTE_PARTY_PALETTE);
@@ -82,7 +82,7 @@ public class Team4602TeleOp2025 extends LinearOpMode {
                 robot.Intake.setPosition(1.0); //Needs to be ajusted
             }
             if (gamepad2.left_bumper){
-                robot.Intake.setPosition(0.3); //Needs to be adjusted
+                robot.Intake.setPosition(0); //Needs to be adjusted
             }
 
 
