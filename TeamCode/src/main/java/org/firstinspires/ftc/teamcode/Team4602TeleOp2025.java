@@ -48,10 +48,10 @@ public class Team4602TeleOp2025 extends LinearOpMode {
             // This ensures all the powers maintain the same ratio, but only when
             // at least one is out of the range [-1, 1]
             double denominator = Math.max(Math.abs(y) + Math.abs(x) + Math.abs(rx), 1.5);
-            double frontLeftPower = (y + x + rx) / denominator;
+            double frontLeftPower = (-y + x + rx) / denominator;
             double backLeftPower = (y - x + rx) / denominator;
             double frontRightPower = (y - x - rx) / denominator;
-            double backRightPower = (y + x - rx) / denominator;
+            double backRightPower = (-y + x - rx) / denominator;
 
             telemetry.addData("RightFront", robot.DriveRightFront.getCurrentPosition());
             telemetry.addData("RightBack", robot.DriveRightBack.getCurrentPosition());

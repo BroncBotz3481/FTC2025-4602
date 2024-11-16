@@ -15,10 +15,22 @@ public class Team4602AutoRed2025 extends LinearOpMode{
     public void runOpMode() {
         robot.Map(hardwareMap);
         waitForStart();
-
+        moveRight(0.4, 2000);   //moves right
         //write code here
 
 
-    }
 
+
+    }
+    public void moveRight (double power, int time){
+        robot.DriveRightFront.setPower(power);
+        robot.DriveLeftFront.setPower(power);
+        robot.DriveRightBack.setPower(power);
+        robot.DriveRightBack.setPower(power);
+        sleep(time);
+        robot.DriveRightFront.setPower(0);
+        robot.DriveLeftFront.setPower(0);
+        robot.DriveRightBack.setPower(0);
+        robot.DriveRightBack.setPower(0);
+    }
 }
