@@ -15,7 +15,7 @@ public class team4602AutoClose2025 extends LinearOpMode{
     public void runOpMode() {
         robot.Map(hardwareMap);
         waitForStart();
-        moveRight(0.4, 2000);   //moves right
+        moveRight(0.4, 1500);   //moves right
         //write code here
 
 
@@ -23,14 +23,20 @@ public class team4602AutoClose2025 extends LinearOpMode{
 
     }
     public void moveRight (double power, int time){
+        robot.Intake.setPosition(0);
+        robot.Arm.setPower(power);
         robot.DriveRightFront.setPower(-power);
         robot.DriveLeftFront.setPower(-power);
         robot.DriveRightBack.setPower(-power);
         robot.DriveRightBack.setPower(-power);
+        robot.Intake.setPosition(1.0);
+        robot.Arm.setPower(-power);
         sleep(time);
+        robot.Arm.setPower(0);
         robot.DriveRightFront.setPower(0);
         robot.DriveLeftFront.setPower(0);
         robot.DriveRightBack.setPower(0);
         robot.DriveRightBack.setPower(0);
+        robot.Intake.setPosition(0);
     }
 }
