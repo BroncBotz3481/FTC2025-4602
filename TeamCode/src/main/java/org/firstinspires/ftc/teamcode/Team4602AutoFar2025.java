@@ -24,10 +24,10 @@ public class Team4602AutoFar2025 extends LinearOpMode {
     public void moveForward(double power, int time) {
         robot.Intake.setPosition(0);
         robot.Arm.setPower(power);
-        robot.DriveRightFront.setPower(-power);
-        robot.DriveLeftFront.setPower(-power);
-        robot.DriveRightBack.setPower(-power);
-        robot.DriveRightBack.setPower(-power);
+        robot.DriveRightFront.setPower(power);
+        robot.DriveLeftFront.setPower(power);
+        robot.DriveRightBack.setPower(power);
+        robot.DriveLeftBack.setPower(power);
         robot.Intake.setPosition(1.0);
         robot.Arm.setPower(-power);
         sleep(time);
@@ -35,7 +35,7 @@ public class Team4602AutoFar2025 extends LinearOpMode {
         robot.DriveRightFront.setPower(0);
         robot.DriveLeftFront.setPower(0);
         robot.DriveRightBack.setPower(0);
-        robot.DriveRightBack.setPower(0);
+        robot.DriveLeftBack.setPower(0);
         robot.Intake.setPosition(0);
     }
 }
