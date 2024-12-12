@@ -16,6 +16,7 @@ public class Team4602HM2025 {
     public DcMotor DriveLeftFront = null;
     public DcMotor DriveRightFront = null;
 
+    public DcMotor Intakemover = null;
     public CRServo take = null;
     public DcMotor Arm = null; //Isabella's added code
     public Servo Intake = null; //Isabella's added code

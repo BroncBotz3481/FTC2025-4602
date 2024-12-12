@@ -86,6 +86,12 @@ public class Team4602TeleOp2025 extends LinearOpMode {
 
 
 
+            if (gamepad2.a) {
+                robot.Intakemover.setPower(1.0); //Needs to be ajusted
+            }
+            if (gamepad2.b){
+                robot.Intakemover.setPower(-1.0); //Needs to be adjusted
+            }
 
 
 
