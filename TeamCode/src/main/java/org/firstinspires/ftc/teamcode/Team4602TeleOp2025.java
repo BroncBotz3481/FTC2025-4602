@@ -71,6 +71,38 @@ public class Team4602TeleOp2025 extends LinearOpMode {
             double Arm = gamepad2.left_stick_y;
             robot.Arm.setPower(Arm * Slow);
 
+
+            while (gamepad2.right_trigger > 0.3) {
+                robot.take.setPower(1.0);
+            }
+            robot.take.setPower(0);
+
+            while (gamepad2.left_trigger > 0.3) {
+                robot.take.setPower(1.0);
+            }
+            robot.take.setPower(0);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //             left bumper is open*, right bumper is close*
 /*          FIX THIS. Servos have a range that we call in the program  point 0 ( think of it as the min)
             And a point called 1.0 (The Max). Based on many factors, the 0 and one points can look
@@ -78,7 +110,7 @@ public class Team4602TeleOp2025 extends LinearOpMode {
             in the real world or just make it so the servo goes in a specific point between 0 - 1
             so it goes in the right direction
 */
-            if (gamepad2.right_bumper) {
+             if (gamepad2.right_bumper) {
                 robot.Intake.setPosition(1.0); //Needs to be ajusted
             }
             if (gamepad2.left_bumper){

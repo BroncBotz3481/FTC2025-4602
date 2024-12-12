@@ -16,7 +16,7 @@ public class Team4602HM2025 {
     public DcMotor DriveLeftFront = null;
     public DcMotor DriveRightFront = null;
 
-
+    public CRServo take = null;
     public DcMotor Arm = null; //Isabella's added code
     public Servo Intake = null; //Isabella's added code
 //I fixed it
@@ -77,7 +77,7 @@ public class Team4602HM2025 {
         Arm.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
         Intake = hwMap.get(Servo.class, "Intake");
-
+        take = hwMap.get(CRServo.class, "take");
         //Arm = hwMap.get(DcMotor.class, "Arm");
 
 //        ColorSensor = hwMap.get(NormalizedColorSensor.class, "sensor");
