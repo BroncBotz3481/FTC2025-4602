@@ -83,6 +83,11 @@ public class Team4602HM2025 {
         Arm2.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         Arm2.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
+        Intakemover = hwMap.get(DcMotor.class, "Intakemover");
+        Intakemover.setDirection(DcMotorSimple.Direction.REVERSE);
+        Intakemover.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        Intakemover.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+
         Intake = hwMap.get(Servo.class, "Intake");
         take = hwMap.get(CRServo.class, "take");
         //Arm = hwMap.get(DcMotor.class, "Arm");
