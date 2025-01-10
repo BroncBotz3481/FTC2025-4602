@@ -5,8 +5,8 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.util.ElapsedTime;
 
-@Autonomous (name="Sanjithishim", group="4602")
-public class Team4602AutoFar2025 extends LinearOpMode {
+@Autonomous (name="Sanjith is him 2.0", group="4602")
+public class testauto extends LinearOpMode {
 
     Team4602HM2025 robot = new Team4602HM2025();
     ElapsedTime Time = new ElapsedTime();
@@ -27,11 +27,12 @@ public class Team4602AutoFar2025 extends LinearOpMode {
     }
 
     public void moveForward(double power, int time) {
+        robot.Arm.setTargetPosition(500);
+        robot.Arm.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         robot.Arm.setPower(0.8);
+        robot.Arm2.setTargetPosition(500);
+        robot.Arm2.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         robot.Arm2.setPower(0.8);
-        sleep(950);
-        robot.Arm.setPower(0);
-        robot.Arm.setPower(0);
         sleep(2000);
         robot.DriveRightFront.setPower(0.8);
         robot.DriveLeftFront.setPower(0.6);
@@ -62,12 +63,12 @@ public class Team4602AutoFar2025 extends LinearOpMode {
         sleep(3000);
         robot.take.setPower(0);
 
-        robot.Arm.setPower(-0.4);
-        robot.Arm2.setPower(-0.4);
-        sleep(1000);
-        robot.Arm.setPower(0);
-        robot.Arm.setPower(0);
-
+        robot.Arm.setTargetPosition(0);
+        robot.Arm.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        robot.Arm.setPower(0.8);
+        robot.Arm2.setTargetPosition(0);
+        robot.Arm2.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        robot.Arm2.setPower(0.8);
 
     }
 }
