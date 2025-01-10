@@ -88,10 +88,14 @@ public class Team4602TeleOp2025 extends LinearOpMode {
 
 
             if (gamepad2.a) {
-                robot.Intakemover.setPower(1.0); //Needs to be adjusted
+                robot.Intakemover.setPower(.5); //Needs to be adjusted
+            } else { 
+                robot.Intakemover.setPower(0.0);
             }
             if (gamepad2.b){
-                robot.Intakemover.setPower(-1.0); //Needs to be adjusted
+                robot.Intakemover.setPower(-.5); //Needs to be adjusted
+            } else { 
+                robot.Intakemover.setPower(0.0);
             }
 
 //             left bumper is open*, right bumper is close*
