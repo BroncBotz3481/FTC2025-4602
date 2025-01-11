@@ -17,6 +17,8 @@ public class Team4602HM2025 {
     public DcMotor DriveRightFront = null;
 
     public DcMotor Intakemover = null;
+
+    public DcMotor Intakemover2 = null;
     public CRServo take = null;
     public DcMotor Arm = null; //Isabella's added code
     public DcMotor Arm2 = null; //Isabella's added code
@@ -89,6 +91,12 @@ public class Team4602HM2025 {
         Intakemover.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
         Intake = hwMap.get(Servo.class, "Intake");
+
+        Intakemover2 = hwMap.get(DcMotor.class, "Intakemover2");
+        Intakemover2.setDirection(DcMotorSimple.Direction.REVERSE);
+        Intakemover2.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        Intakemover2.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+
         take = hwMap.get(CRServo.class, "take");
         //Arm = hwMap.get(DcMotor.class, "Arm");
 

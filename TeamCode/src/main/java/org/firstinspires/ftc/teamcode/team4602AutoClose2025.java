@@ -23,10 +23,10 @@ public class team4602AutoClose2025 extends LinearOpMode{
 
     }
     public void moveRight (double power, int time){
-        robot.DriveRightFront.setPower(0.8);
-        robot.DriveLeftFront.setPower(0.6);
-        robot.DriveRightBack.setPower(0.8);
-        robot.DriveLeftBack.setPower(-0.6);
+        robot.DriveRightFront.setPower(power);
+        robot.DriveLeftFront.setPower(power);
+        robot.DriveRightBack.setPower(power);
+        robot.DriveLeftBack.setPower( power);
         sleep(1000);
         robot.DriveRightFront.setPower(0);
         robot.DriveLeftFront.setPower(0);
