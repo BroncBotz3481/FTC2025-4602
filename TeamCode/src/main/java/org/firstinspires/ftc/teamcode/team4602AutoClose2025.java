@@ -15,7 +15,7 @@ public class team4602AutoClose2025 extends LinearOpMode{
     public void runOpMode() {
         robot.Map(hardwareMap);
         waitForStart();
-        moveRight(0.4, 1500);   //moves right
+        moveRight(0.4, 4000);   //moves right
         //write code here
 
 
