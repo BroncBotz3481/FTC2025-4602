@@ -39,7 +39,7 @@ public class testauto extends LinearOpMode {
 
         robot.Arm.setPower(0.6);
         robot.Arm2.setPower(0.6);
-        sleep(1000);               //Arm Up
+        sleep(800);               //Arm Up
         robot.Arm.setPower(0);
         robot.Arm2.setPower(0);
 
@@ -48,7 +48,7 @@ public class testauto extends LinearOpMode {
         robot.DriveLeftFront.setPower(0.6);
         robot.DriveRightBack.setPower(0.8);
         robot.DriveLeftBack.setPower(-0.6);
-        sleep(1000);                      //Move forward
+        sleep(950);                      //Move forward
         robot.DriveRightFront.setPower(0);
         robot.DriveLeftFront.setPower(0);
         robot.DriveRightBack.setPower(0);
@@ -58,14 +58,14 @@ public class testauto extends LinearOpMode {
 
         robot.Arm.setPower(-0.6);
         robot.Arm2.setPower(-0.6);
-        sleep(500);               //arm downb
+        sleep(300);               //arm downb
         robot.Arm.setPower(0);
         robot.Arm2.setPower(0);
 
         sleep(1000);
 
         robot.Intake.setPosition(0);
-        sleep(1000);
+        sleep(500);
         robot.DriveRightFront.setPower(-0.8);
         robot.DriveLeftFront.setPower(-0.6);
         robot.DriveRightBack.setPower(-0.8);
@@ -76,16 +76,55 @@ public class testauto extends LinearOpMode {
         robot.DriveRightBack.setPower(0);
         robot.DriveLeftBack.setPower(0);
 
-        sleep(500);
-        robot.DriveRightFront.setPower(-0.8); //Frontleft & backright go the same way others go opposite for strafing
+        sleep(500);//turn right
         robot.DriveLeftFront.setPower(0.8);
-        robot.DriveRightBack.setPower(0.8);
-        robot.DriveLeftBack.setPower(0.8);
-        sleep(750);                //strafe
+        robot.DriveLeftBack.setPower(-0.8);
+        sleep(2250);
         robot.DriveRightFront.setPower(0);
         robot.DriveLeftFront.setPower(0);
         robot.DriveRightBack.setPower(0);
-      robot.DriveLeftBack.setPower(0);
+        robot.DriveLeftBack.setPower(0);
+
+//        sleep(250);
+//        robot.DriveRightFront.setPower(0.8);
+//        robot.DriveLeftFront.setPower(0.6);
+//        robot.DriveRightBack.setPower(0.8);
+//        robot.DriveLeftBack.setPower(-0.6);
+//        sleep(750);                      //Move forward
+//        robot.DriveRightFront.setPower(0);
+//        robot.DriveLeftFront.setPower(0);
+//        robot.DriveRightBack.setPower(0);
+//        robot.DriveLeftBack.setPower(0);
+
+//        sleep(500);//turn left
+//        robot.DriveLeftFront.setPower(0.8);
+//        robot.DriveLeftBack.setPower(-0.8);
+//        sleep(2000);
+//        robot.DriveRightFront.setPower(0);
+//        robot.DriveLeftFront.setPower(0);
+//        robot.DriveRightBack.setPower(0);
+//        robot.DriveLeftBack.setPower(0);
+
+
+//        robot.Arm.setPower(0.6);
+//        robot.Arm2.setPower(0.6);
+//        sleep(750);               //Arm Up
+//        robot.Arm.setPower(0);
+//        robot.Arm2.setPower(0);
+//        robot.Intake.setPosition(1);
+//
+//        sleep(250);
+//        robot.DriveRightFront.setPower(0.8);
+//        robot.DriveLeftFront.setPower(0.6);
+//        robot.DriveRightBack.setPower(0.8);
+//        robot.DriveLeftBack.setPower(-0.6);
+//        sleep(450);                      //Move forward
+//        robot.DriveRightFront.setPower(0);
+//        robot.DriveLeftFront.setPower(0);
+//        robot.DriveRightBack.setPower(0);
+//        robot.DriveLeftBack.setPower(0);
+//        sleep(5000);
+//        robot.Intake.setPosition(0);
 
     }
 }
