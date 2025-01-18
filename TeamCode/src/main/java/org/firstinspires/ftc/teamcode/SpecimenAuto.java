@@ -6,7 +6,7 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.util.ElapsedTime;
 
 @Autonomous (name="Specimen Auto", group="4602")
-public class testauto extends LinearOpMode {
+public class SpecimenAuto extends LinearOpMode {
 
     Team4602HM2025 robot = new Team4602HM2025();
     ElapsedTime Time = new ElapsedTime();
@@ -15,11 +15,14 @@ public class testauto extends LinearOpMode {
     @Override
     public void runOpMode() {
         robot.Map(hardwareMap);
+
         waitForStart();
         moveForward(0.4, 3000);
         //write code here
-
-
+        robot.Arm.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        robot.Arm2.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        robot.Arm.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        robot.Arm2.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
     }
 
     public void moveForward(double power, int time) {
@@ -58,9 +61,10 @@ public class testauto extends LinearOpMode {
 
         robot.Arm.setPower(-0.6);
         robot.Arm2.setPower(-0.6);
-        sleep(300);               //arm downb
+        sleep(300);               //arm down
         robot.Arm.setPower(0);
         robot.Arm2.setPower(0);
+
 
         sleep(1000);
 
@@ -70,20 +74,39 @@ public class testauto extends LinearOpMode {
         robot.DriveLeftFront.setPower(-0.6);
         robot.DriveRightBack.setPower(-0.8);
         robot.DriveLeftBack.setPower(0.6);
-        sleep(1000);                      //Move backward
+        sleep(1000);
+
+        robot.DriveRightFront.setPower(0);
+        robot.DriveLeftFront.setPower(0);
+        robot.DriveRightBack.setPower(0);
+        robot.DriveLeftBack.setPower(0);
+        robot.Arm.setPower(-0.6);
+        robot.Arm2.setPower(-0.6);
+        sleep(1000);               //arm down
+        robot.Arm.setPower(0);
+        robot.Arm2.setPower(0);
+        robot.Arm.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        robot.Arm2.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+
+        sleep(500);//turn right
+        robot.DriveRightFront.setPower(-0.8);
+        robot.DriveLeftFront.setPower(0.6);
+        robot.DriveRightBack.setPower(-0.8);
+        robot.DriveLeftBack.setPower(-0.6);
+        sleep(500);
         robot.DriveRightFront.setPower(0);
         robot.DriveLeftFront.setPower(0);
         robot.DriveRightBack.setPower(0);
         robot.DriveLeftBack.setPower(0);
 
-        sleep(500);//turn right
-        robot.DriveLeftFront.setPower(0.8);
-        robot.DriveLeftBack.setPower(-0.8);
-        sleep(2250);
-        robot.DriveRightFront.setPower(0);
-        robot.DriveLeftFront.setPower(0);
-        robot.DriveRightBack.setPower(0);
-        robot.DriveLeftBack.setPower(0);
+        robot.Arm.setTargetPosition(500);
+        robot.Arm2.setTargetPosition(500);
+        robot.Arm.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        robot.Arm2.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        robot.Arm.setPower(0.5);
+        robot.Arm2.setPower(0.5);
+
+
 
 //        sleep(250);
 //        robot.DriveRightFront.setPower(0.8);
