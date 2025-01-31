@@ -98,7 +98,7 @@ public class SpecimenAuto extends LinearOpMode {
 
         robot.Arm.setPower(0.6);
         robot.Arm2.setPower(0.6);
-        sleep(300);               //arm up to pick up from human player
+        sleep(375);               //arm up to pick up from human player
         robot.Arm.setPower(0);
         robot.Arm2.setPower(0);
 
@@ -122,13 +122,13 @@ public class SpecimenAuto extends LinearOpMode {
         robot.DriveRightBack.setPower(0);
         robot.DriveLeftBack.setPower(0);
 
-        sleep(1000);
+        sleep(2000);
 
         robot.DriveRightFront.setPower(0.8);
         robot.DriveLeftFront.setPower(0.6);
         robot.DriveRightBack.setPower(0.8);
         robot.DriveLeftBack.setPower(-0.6);
-        sleep(350);                      //Move forward
+        sleep(325);                      //Move forward
         robot.DriveRightFront.setPower(0);
         robot.DriveLeftFront.setPower(0);
         robot.DriveRightBack.setPower(0);
@@ -138,11 +138,6 @@ public class SpecimenAuto extends LinearOpMode {
         robot.Intake.setPosition(1);    //intake close
         sleep(1000);
 
-        robot.Arm.setPower(0.6);
-        robot.Arm2.setPower(0.6);
-        sleep(1300);               //arm up
-        robot.Arm.setPower(0);
-        robot.Arm2.setPower(0);
 
         robot.DriveRightFront.setPower(-0.8);
         robot.DriveLeftFront.setPower(-0.6);
@@ -155,11 +150,24 @@ public class SpecimenAuto extends LinearOpMode {
         robot.DriveRightBack.setPower(0);
         robot.DriveLeftBack.setPower(0);
 
+        robot.Arm.setPower(-0.6);
+        robot.Arm2.setPower(-0.6);
+        sleep(1000);               //arm down to rest position
+        robot.Arm.setPower(0);
+        robot.Arm2.setPower(0);
+
+        robot.Arm.setPower(0.6);
+        robot.Arm2.setPower(0.6);
+        sleep(800);               //arm up
+        robot.Arm.setPower(0);
+        robot.Arm2.setPower(0);
+        
+
         robot.DriveRightFront.setPower(-0.8);
         robot.DriveLeftFront.setPower(0.6);
         robot.DriveRightBack.setPower(-0.8);
         robot.DriveLeftBack.setPower(-0.6);
-        sleep(800);                //turn
+        sleep(750);                //turn
         robot.DriveRightFront.setPower(0);
         robot.DriveLeftFront.setPower(0);
         robot.DriveRightBack.setPower(0);
