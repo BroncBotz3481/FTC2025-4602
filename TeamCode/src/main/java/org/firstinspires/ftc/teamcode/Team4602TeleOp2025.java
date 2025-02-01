@@ -91,12 +91,12 @@ public class Team4602TeleOp2025 extends LinearOpMode {
 //             left bumper is open*, right bumper is close*
 /*          FIX THIS. Servos have a range that we call in the program  point 0 ( think of it as the min)
             And a point called 1.0 (The Max). Based on many factors, the 0 and one points can look
-            very different from servo to servo. You can use a servo programer to change theses positions
+            very different from servo to servo. You can use a servo programmer to change theses positions
             in the real world or just make it so the servo goes in a specific point between 0 - 1
             so it goes in the right direction
 */
              if (gamepad2.right_bumper) {
-                robot.Intake.setPosition(1.0); //Needs to be ajusted
+                robot.Intake.setPosition(1.0); //Needs to be adjusted
             }
             if (gamepad2.left_bumper){
                 robot.Intake.setPosition(0); //Needs to be adjusted
