@@ -126,7 +126,7 @@ public class SpecimenAuto extends LinearOpMode {
         robot.DriveLeftFront.setPower(0.6);
         robot.DriveRightBack.setPower(0.8);
         robot.DriveLeftBack.setPower(-0.6);
-        sleep(250);                      //Move forward
+        sleep(300);                      //Move forward
         robot.DriveRightFront.setPower(0);
         robot.DriveLeftFront.setPower(0);
         robot.DriveRightBack.setPower(0);
@@ -135,7 +135,7 @@ public class SpecimenAuto extends LinearOpMode {
 
         robot.Intake.setPosition(1);    //intake close
         sleep(1000);
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////2nd half
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////2nd half
 
         robot.DriveRightFront.setPower(-0.8);
         robot.DriveLeftFront.setPower(-0.6);
