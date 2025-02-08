@@ -72,22 +72,22 @@ public class Team4602TeleOp2025 extends LinearOpMode {
             robot.Arm.setPower(Arm * Slow);
 
 
-            while (gamepad2.right_trigger > 0.3) {
+            while (gamepad2.a) {
                 robot.addmover.setPower(-1.0);
             }
             robot.addmover.setPower(0);
 
-            while (gamepad2.left_trigger > 0.3) {
+            while (gamepad2.b) {
                 robot.addmover.setPower(1.0);
             }
 
             robot.addintake.setPower(0);
-            if (gamepad2.right_trigger > 0.3) {
+            if (gamepad2.a) {
                 robot.addintake.setPower(-1.0);
             }
             robot.addintake.setPower(0);
 
-            if (gamepad2.left_trigger > 0.3) {
+            if (gamepad2.b) {
                 robot.addintake.setPower(1.0);
             }
             robot.addintake.setPower(0);
@@ -96,10 +96,10 @@ public class Team4602TeleOp2025 extends LinearOpMode {
             robot.addmoverall.setPower(-IntakeSpeed);
 
 
-            if (gamepad2.a) {
+            if (gamepad2.right_trigger > 0.3) {
                 robot.addmoverall.setPower(1.0); //Needs to be adjusted
             }
-            if (gamepad2.b){
+            if (gamepad2.left_trigger > 0.3){
                 robot.addmoverall.setPower(-1.0); //Needs to be adjusted
             }
 
