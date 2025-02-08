@@ -97,10 +97,10 @@ public class Team4602TeleOp2025 extends LinearOpMode {
 
 
             if (gamepad2.right_trigger > 0.3) {
-                robot.addmoverall.setPower(1.0); //Needs to be adjusted
+                robot.addintake.setPower(1.0); //Needs to be adjusted
             }
             if (gamepad2.left_trigger > 0.3){
-                robot.addmoverall.setPower(-1.0); //Needs to be adjusted
+                robot.addintake.setPower(-1.0); //Needs to be adjusted
             }
 
 //             left bumper is open*, right bumper is close*
