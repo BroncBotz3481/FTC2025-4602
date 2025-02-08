@@ -16,10 +16,11 @@ public class Team4602HM2025 {
     public DcMotor DriveLeftFront = null;
     public DcMotor DriveRightFront = null;
 
-    public DcMotor Intakemover = null;
+    public DcMotor addmoverall = null;
 
     public DcMotor Intakemover2 = null;
-    public CRServo take = null;
+    public CRServo addmover = null;
+    public CRServo addintake = null;
     public DcMotor Arm = null; //Isabella's added code
     public DcMotor Arm2 = null; //Isabella's added code
     public Servo Intake = null; //Isabella's added code
@@ -85,10 +86,10 @@ public class Team4602HM2025 {
         Arm2.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         Arm2.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
-        Intakemover = hwMap.get(DcMotor.class, "Intakemover");
-        Intakemover.setDirection(DcMotorSimple.Direction.REVERSE);
-        Intakemover.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
-        Intakemover.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        addmoverall = hwMap.get(DcMotor.class, "addmoverall");
+        addmoverall.setDirection(DcMotorSimple.Direction.REVERSE);
+        addmoverall.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        addmoverall.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
         Intake = hwMap.get(Servo.class, "Intake");
 
@@ -97,7 +98,8 @@ public class Team4602HM2025 {
         Intakemover2.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         Intakemover2.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
-        take = hwMap.get(CRServo.class, "take");
+        addmover = hwMap.get(CRServo.class, "addmover");
+        addintake = hwMap.get(CRServo.class, "addintake");
         //Arm = hwMap.get(DcMotor.class, "Arm");
 
 //        ColorSensor = hwMap.get(NormalizedColorSensor.class, "sensor");

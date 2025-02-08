@@ -74,19 +74,35 @@ public class Team4602TeleOp2025 extends LinearOpMode {
 
 
             while (gamepad2.right_trigger > 0.3) {
-                robot.take.setPower(-1.0);
+                robot.addmover.setPower(-1.0);
             }
-            robot.take.setPower(0);
+            robot.addmover.setPower(0);
 
             while (gamepad2.left_trigger > 0.3) {
-                robot.take.setPower(1.0);
+                robot.addmover.setPower(1.0);
             }
-            robot.take.setPower(0);
 
+            robot.addintake.setPower(0);
+            if (gamepad2.right_trigger > 0.3) {
+                robot.addintake.setPower(-1.0);
+            }
+            robot.addintake.setPower(0);
+
+            if (gamepad2.left_trigger > 0.3) {
+                robot.addintake.setPower(1.0);
+            }
+            robot.addintake.setPower(0);
 
             double IntakeSpeed = gamepad2.right_stick_y;
-            robot.Intakemover.setPower(-IntakeSpeed);
+            robot.addmoverall.setPower(-IntakeSpeed);
             robot.Intakemover2.setPower(IntakeSpeed);
+
+            if (gamepad2.a) {
+                robot.addmoverall.setPower(1.0); //Needs to be adjusted
+            }
+            if (gamepad2.b){
+                robot.addmoverall.setPower(-1.0); //Needs to be adjusted
+            }
 
 //             left bumper is open*, right bumper is close*
 /*          FIX THIS. Servos have a range that we call in the program  point 0 ( think of it as the min)
