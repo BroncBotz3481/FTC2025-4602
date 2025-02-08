@@ -94,7 +94,7 @@ public class Team4602TeleOp2025 extends LinearOpMode {
 
             double IntakeSpeed = gamepad2.right_stick_y;
             robot.addmoverall.setPower(-IntakeSpeed);
-            robot.Intakemover2.setPower(IntakeSpeed);
+
 
             if (gamepad2.a) {
                 robot.addmoverall.setPower(1.0); //Needs to be adjusted
