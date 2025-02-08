@@ -70,7 +70,6 @@ public class Team4602TeleOp2025 extends LinearOpMode {
 
             double Arm = gamepad2.left_stick_y;
             robot.Arm.setPower(Arm * Slow);
-            robot.Arm2.setPower(Arm * Slow);
 
 
             while (gamepad2.right_trigger > 0.3) {

@@ -37,10 +37,8 @@ public class SpecimenAuto extends LinearOpMode {
 //        robot.DriveLeftBack.setPower(0);
 //        sleep(8000);
         robot.Arm.setPower(0.6);
-        robot.Arm2.setPower(0.6);
         sleep(800);               //Arm Up
         robot.Arm.setPower(0.1);
-        robot.Arm2.setPower(0.1);
 
         sleep(500);
         robot.DriveRightFront.setPower(0.8);
@@ -56,10 +54,8 @@ public class SpecimenAuto extends LinearOpMode {
         sleep(500);
 
         robot.Arm.setPower(-0.6);
-        robot.Arm2.setPower(-0.6);
         sleep(300);               //arm down
         robot.Arm.setPower(0);
-        robot.Arm2.setPower(0);
 
 
         robot.Intake.setPosition(0);  //intake open
@@ -77,10 +73,8 @@ public class SpecimenAuto extends LinearOpMode {
         robot.DriveLeftBack.setPower(0);
 
         robot.Arm.setPower(-0.6);
-        robot.Arm2.setPower(-0.6);
         sleep(1000);               //arm down to rest position
         robot.Arm.setPower(0);
-        robot.Arm2.setPower(0);
 
         sleep(500);//turn right
         robot.DriveRightFront.setPower(-0.8);
@@ -95,10 +89,8 @@ public class SpecimenAuto extends LinearOpMode {
 
 
         robot.Arm.setPower(0.6);
-        robot.Arm2.setPower(0.6);
         sleep(375);               //arm up to pick up from human player
         robot.Arm.setPower(0);
-        robot.Arm2.setPower(0);
 
         robot.DriveRightFront.setPower(0.8);
         robot.DriveLeftFront.setPower(0.6);
@@ -183,16 +175,12 @@ public class SpecimenAuto extends LinearOpMode {
         sleep(250);
 
         robot.Arm.setPower(-0.6);
-        robot.Arm2.setPower(-0.6);
         sleep(1000);               //arm down to rest position
         robot.Arm.setPower(0);
-        robot.Arm2.setPower(0);
 
         robot.Arm.setPower(0.6);
-        robot.Arm2.setPower(0.6);
         sleep(800);               //arm up
         robot.Arm.setPower(0);
-        robot.Arm2.setPower(0);
 
 
         robot.DriveRightFront.setPower(0.8);
@@ -206,10 +194,8 @@ public class SpecimenAuto extends LinearOpMode {
         robot.DriveLeftBack.setPower(0);
 
         robot.Arm.setPower(-0.6);
-        robot.Arm2.setPower(-0.6);
         sleep(450);               //arm down
         robot.Arm.setPower(0);
-        robot.Arm2.setPower(0);
 
 
         sleep(500);
@@ -229,10 +215,8 @@ public class SpecimenAuto extends LinearOpMode {
         robot.DriveLeftBack.setPower(0);
 
         robot.Arm.setPower(-0.6);
-        robot.Arm2.setPower(-0.6);
         sleep(1000);               //arm down to rest position
         robot.Arm.setPower(0);
-        robot.Arm2.setPower(0);
 
         sleep(500);//turn right
         robot.DriveRightFront.setPower(-0.8);
@@ -277,7 +261,6 @@ public class SpecimenAuto extends LinearOpMode {
         robot.DriveLeftFront.setPower(0);
         robot.DriveRightBack.setPower(0);
         robot.DriveLeftBack.setPower(0);
-
 
 
 
